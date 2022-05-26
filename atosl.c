@@ -16,7 +16,6 @@
 #include <fcntl.h>
 #undef NDEBUG
 #include <assert.h>
-#include <arpa/inet.h>
 #include <string.h>
 #include <getopt.h>
 #include <libgen.h>
@@ -29,7 +28,7 @@
 #include "subprograms.h"
 #include "common.h"
 
-#define VERSION ATOSL_VERSION
+#define VERSION "2.0.0"
 
 #define DWARF_ASSERT(ret, err) \
     do { \

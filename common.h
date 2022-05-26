@@ -49,6 +49,7 @@ void common_warning(const char *file, int lineno, const char *format, ...);
     } while (0);
 
 /* Wrapper to call write() in a loop until all data is written */
+/*
 static inline ssize_t
 _write(int fd, const void *buf, size_t count)
 {
@@ -64,8 +65,10 @@ _write(int fd, const void *buf, size_t count)
     }
     return written;
 }
+*/
 
 /* Wrapper to call read() in a loop until all data is read */
+/*
 static inline ssize_t _read(int fd, void *buf, size_t count)
 {
     ssize_t n_read = 0;
@@ -80,5 +83,6 @@ static inline ssize_t _read(int fd, void *buf, size_t count)
     }
     return n_read;
 }
+*/
 
 #endif /* COMMON_ */

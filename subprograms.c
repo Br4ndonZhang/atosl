@@ -313,7 +313,11 @@ static char *get_cache_filename(struct subprograms_options_t *options,
 
     if (access(filename, F_OK) != 0) {
         if (errno == ENOENT) {
+#if defined(WIN32)
+            int ret = mkdir(filename);
+#else
             int ret = mkdir(filename, 0777);
+#endif
 
             if (ret < 0)
                 fatal("unable to create %s: %s", filename, strerror(errno));

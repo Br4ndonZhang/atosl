@@ -11,6 +11,8 @@
 #ifndef ATOSL_
 #define ATOSL_
 
+#include <inttypes.h>
+
 #define MH_MAGIC 0xfeedface
 #define MH_MAGIC_64 0xfeedfacf
 
