@@ -23,6 +23,7 @@
 
 #include <dwarf.h>
 #include <libdwarf.h>
+#include <netinet/in.h>
 
 #include "atosl.h"
 #include "subprograms.h"
