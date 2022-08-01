@@ -14,14 +14,26 @@ libdwarf is available for.
 
 ## Requirements
 ### CentOS
-yum -y install libdwarf-devel libdwarf-tools binutils-devel lasso libdwarf lasso-python libdwarf-tools libdwarf-static tbb
+yum -y install binutils-devel lasso lasso-python tbb
+
+* [Download libdwarf](https://www.prevanders.net/libdwarf-20200114.tar.gz)
+*  cd path/to/code
+* ./configure --enable-shared
+* make
+* make check
+* make install
+* cp libdwarf/.libs/libdwarf.so* /usr/lib
+
+> if occurs error：error while loading share libraries：libdwarf.so.1: cannot open shared object file: No such file or directory. Try  '/sbin/ldconfig –v'
 
 ### Unbuntu
-sudo apt-get install libiberty-dev libdwarf-dev  
-CFLAGS= -I /usr/include/libdwarf  
+* sudo apt-get install libiberty-dev libdwarf-dev  
+* CFLAGS= -I /usr/include/libdwarf  
 [libdwarf](http://www.prevanders.net/dwarf.html) - This library
 does the heavily lifting of parsing the DWARF debugging data within the
 binaries.
+* make
+* make install
 
 ### Install Dependencies on OS X
 
